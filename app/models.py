@@ -25,3 +25,6 @@ class Post(db.Model):
             self.slug = slugify(self.title)
         else:
             self.slug = str(int(time()))
+
+    def __repr__(self) -> str:
+        return f'<Post id:{self.id},title:{self.title}'
