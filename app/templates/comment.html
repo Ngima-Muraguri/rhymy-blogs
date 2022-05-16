@@ -1,5 +1,5 @@
 {% extends 'base.html'%} {% import 'bootstrap/wtf.html' as wtf %} {% block content%}
-<div class="container-fluid" style="background-color: #b5179e; color: white; height:600px ">
+<div class="container-fluid" style="background-color: #a98467; color: white; height:600px ">
     {{user.username}} {{blogs.blogs}}{% if comments %}
     <div class="row ">
         <div class="col-sm-8 ">
@@ -13,8 +13,8 @@
                     <ul>
                         <li>
                             <h5> {{ comment.comment }}</h5>
-                            <a style="color:#b5179e; background-color: white;" href="{{url_for( 'main.delete_comment',blog_id=comment.id)}}"><button>Delete</button></a>
-                            <a style="color:#b5179e; background-color: white;" href="{{url_for( 'main.update_comment',blog_id=comment.id)}}"><button>Update</button></a>
+                            <a style="color:#a98467; background-color: white;" href="{{url_for( 'main.delete_comment',blog_id=comment.id)}}"><button>Delete</button></a>
+                            <a style="color:#a98467; background-color: white;" href="{{url_for( 'main.update_comment',blog_id=comment.id)}}"><button>Update</button></a>
                         </li>
                     </ul>
 

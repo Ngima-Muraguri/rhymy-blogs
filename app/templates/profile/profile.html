@@ -1,5 +1,5 @@
 {% extends 'base.html'%} {% import 'macros.html' as macro%} {% block content %}
-<div class="container-fluid" style="background-color:#b5179e; color: white; height: 600px">
+<div class="container-fluid" style="background-color:#a98467; color: white; height: 600px">
     <div class="row">
         <!-- displaying  Username-->
         <div class="col-md-4">
@@ -11,7 +11,7 @@
                 <br> # {{user.bio}}</p> {%else%}
             <p> {{user.username| capitalize}} You have no bio</p>
             {% endif %} {% if user == current_user %}
-            <p><a style="color:#b5179e; background-color: white;" href=" {{url_for('main.update_profile',uname=user.username)}} " class="btn btn-primary" role="button">Add bio</a></p>
+            <p><a style="color:#a98467; background-color: white;" href=" {{url_for('main.update_profile',uname=user.username)}} " class="btn btn-primary" role="button">Add bio</a></p>
             {% endif%}
         </div>
 
