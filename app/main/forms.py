@@ -2,9 +2,11 @@ from flask_wtf import FlaskForm
 from wtforms import StringField,TextAreaField,SubmitField,ValidationError
 from wtforms.validators import DataRequired
 from ..models import Subscribe
+
 class CommentForm(FlaskForm):
      comment = TextAreaField('Comment',validators = [DataRequired()])
      submit = SubmitField('Submit')
+
 class UpdateProfile(FlaskForm):
     bio = TextAreaField('Tell us more about you.',validators = [DataRequired()])
     submit = SubmitField('Submit')
@@ -21,6 +23,7 @@ class UpdateBlog(FlaskForm):
 class UpdateComment(FlaskForm):
     text = TextAreaField('Edit comment ',validators = [DataRequired()])
     submit = SubmitField('Update')
+    
 class SubscribeForm(FlaskForm):
     email = StringField('Enter your  email',validators = [DataRequired()])
     username = StringField('Username', validators = [DataRequired()])
